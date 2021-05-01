@@ -1,394 +1,203 @@
 # Images
 
-Images can improve the design and the appearance of a web page.
+*There are many reasons why you might want to add an image to a web page: you might want to include a logo, photograph, illustration, diagram, or chart.*
 
-**Adding Images**
+*There are several things to consider when selecting and preparing images for your site, but taking time to get them right will make it look more attractive and professional.*
 
-`<img src="img_kid.jpg" alt="kid in a jacket">`
+### In this chapter you will learn how to:
 
-Height & Width
-of Images
+1. Include an image in your web pages using HTML
+2. Pick which image format to use
+3. Show an image at the right size
+4. Optimize an image for use on the web to make pages load faster
 
-`<img src="images/quokka.jpg" alt="A family of
-quokka" width="600" height="450" />`
+## Choosing Images for Your Site
 
- Place Images
-in Your Code:
+*A picture can say a thousand words, and great images help make the difference between an average-looking site and a really engaging one.*
 
-1. 1: before a paragraph
-The paragraph starts on a new
-line after the image.
-2. inside the start of a
-paragraph
-The first row of text aligns with
-the bottom of the image.
-3. in the middle of a
-paragraph
-The image is placed between the
-words of the paragraph that it
-appears in.
+*Images can be used to set the tone for a site in less time than 
+it takes to read a description. If you do not have photographs to use on your website, there are companies who sell stock images; these are images you pay to use (there is a list of stock photography websites below).*
 
-**Old Code: Aligning Images Horizontally**
+*Remember that all images are subject to copyright, and you can get in trouble for simply taking photographs from another website.*
 
-align horizontally.html HTML
-The align attribute was
-commonly used to indicate how
-the other parts of a page should
-flow around an image.
+*If you have a page that shows several images (such as product photographs or members of a team) then putting them on a simple, consistent background helps them look better as a group.*
 
-The align attribute can take
-these horizontal values:
+## Storing Images on Your Site
 
-**left**
-This aligns the image to the left
+*If you are building a site from scratch, it is good practice to create a folder for all of the images the site uses.*
 
-**right**
-This aligns the image to the right
+*As a website grows, keeping images in a separate folder helps you understand how the site is organized. Here you can see an example of the files for a website; all of the images are stored in a folder called images.*
 
-**Old Code: Aligning Images Vertically**
+*On a big site you might like to add subfolders inside the imagesfolder. For example, images such as logos and buttons might sit in a folder called interface, product photographs might sit in a page called products, and images related to news might live in a folder called news.*
 
-**top**
-This aligns the first line of the
-surrounding text with the top of
-the image.
+*If you are using a content management system or blogging platform, there are usually tools built into the admin site that allow you to upload images, and the program will probably already have a separate folder for image files and any other uploads.*
 
-**middle**
-This aligns the first line of the
-surrounding text with the middle
-of the image.
+## Adding Images
 
-**bottom**
-This aligns the first line of the
-surrounding text with the bottom
-of the image.
+*To add an image into the page you need to use an <img>element. This is an empty element (which means there is no closing tag). It must carry the following two attributes:*
 
-**Three Rules for Creating Images**
+1. src
 
-1. Save images in the right format
-2. Save images at the right size
-3. Use the correct resolution
-
-There are several tools you can use to edit and
-save images to ensure that they are the right
-size, format, and resolution.
-The most popular tool amongst
-web professionals is **Adobe Photoshop**
-
-**Image Formats: JPEG**
-Whenever you have **many different
-colors** in a picture you should use **a JPEG**.
+*This tells the browser where it can find the image file. This will usually be a relative URL pointing to an image on your own site. (Here you can see that the images are in a child folder called images — relative URLs were covered on pages 83-84).*
 
 
-**Image Formats: GIF**
-Use GIF or PNG format
-when saving images
-with few colors or large
-areas of the same color.
+2. alt
 
-**Image Dimensions**
-The images you use on your website should be
-saved at the same width and height that you
-want them to appear on the page.
+*This provides a text description of the image which describes the image if you cannot see it.*
 
-* REDUCING IMAGE SIZE
-You can reduce the size of
-images to create a smaller
-version of the image.
+#### title
 
-- INCREASING IMAGE SIZE
-***You can't increase the size of
-photos significantly without
-affecting the image quality.***
+*You can also use the titleattribute with the <img> element to provide additional information about the image. Most browsers will display the content of this attribute in a tootip when the user hovers over the image.*
 
-- CHANGING SHAPE
-Only some images can be
-cropped without losing valuable
-information.
+*The text used in the alt attribute is often referred to as alt text. It should give an accurate description of the image content so it can be understood by screen reader software (used by people with visual impairments) and search engines.*
 
-
-**Cropping Images**
-When cropping images it is important not to
-lose valuable information. It is best to source
-images that are the correct shape if possible.
-
-
-**Image Resolution**
-Images created for the web should be saved at
-a resolution of **72 ppi**. The higher the resolution
-of the image, the larger the size of the file.
-
-**Vector Images**
- are created by
-placing points on a grid, and
-drawing lines between those
-points. A color can then be
-added to "fill in" the lines that
-have been created.
-
-The advantage of creating line
-drawings in vector format is that
-you can **increase the dimensions
-of the image without affecting
-the quality of it.**
-
-**Transparency**
-Creating an image that is partially transparent
-(or "see-through") for the web involves selecting one of two formats:
-* Transparent GIF
-* PNG 
-
-
-**Checking the Size of Images**
-right click on the image of website and open it in a new tab 
-it will show under the image the size of image.
-
-**Figure and Figure Caption**
-`<figure>`
-Images often come with
-captions. HTML5 has introduced
-a new `<figure>` element to
-contain images and their caption
-so that the two are associated.
-
-**You can have more than one image inside the `<figure>`
-element as long as they all share the same caption.**
-
-The `<figcaption>` element has
-been added to HTML5 in order
-to allow web page authors to add
-a caption to an image.
+*If the image is just to make a page look more attractive (and it has no meaning, such as a graphic dividing line), then the alt attribute should still be used but the quotes should be left empty.*
 
 # Color
-Foreground Color
 
+*Color can really bring your pages to life.*
 
-The **color** property allows you
-to specify the **color of text inside an element.** 
+*In this chapter we will look at:*
 
-You can specify any
-color in CSS in one of three ways:
-1. **rgb values**
-These express colors in terms
-of how much red, green and
-blue are used to make it up. For
-example: rgb(100,100,90)
+1. How to specify colors, as there are three common ways in which you can indicate your choice of colors (plus extra ways made available in CSS3)
 
-    Values for red, green, and blue
-are expressed as numbers
-between 0 and 255.
+2. Color terminology, as there are some terms that are very helpful to understand when it comes to picking colors.
 
-2. **hex codes**
-These are six-digit codes that
-represent the amount of red,
-green and blue in a color,
-preceded by a pound or hash #
-sign. For example: #ee3e80
+3. Contrast, and ensuring that your text is readable.
 
-3. **color names**
-There are 147 predefined color
-names that are recognized
-by browsers.
+4. Background colors for behind either your entire page or parts of a page.
 
-**background-color**
+*What you will learn about colors in this chapter will then be used in subsequent chapters when it comes to looking at colors of text and boxes in CSS.*
 
-CSS treats each HTML element
-**as if it appears in a box**, and the
-background-color property
-sets the color of the background
-for that box.
+### Background Color
 
-***Every color on a computer screen is created by mixing amounts of red,green, and blue. To find the color you want, you can use a color picker.***
+*CSS treats each HTML element as if it appears in a box, and the background-color property sets the color of the background for that box.*
 
+*You can specify your choice of background color in the same three ways you can specify foreground colors: RGB values, hex codes, and color names (covered on the next page).*
 
+*If you do not specify a background color, then the background is transparent.*
 
-**Hue** is near to the colloquial idea
-of color
-
-**Saturation** refers to the amount
-of gray in a color. At maximum
-saturation, there would be no
-gray in the color. At minimum
-saturation, the color would be
-mostly gray.
-
-**Brightness** (or "value") refers
-to how much black is in a color.
-
-**Contrast**
-
-- Low Contrast
-Text is harder to read when
-there is low contrast between
-background and foreground
-colors.
-- High
-Contrast
-- Medium contrast 
-
-
+*By default, most browser windows have a white background, but browser users can set a background color for their windows, so if you want to be sure that the background is white you can use the background-color property on the <body> element.*
 
 # Text
-Typeface Terminology
 
-change the type of font 
+*The properties that allow you to control the appearance of text can be split into two groups:*
 
-Weight of font 
-* Light
-* Medium
-* Bold
-* Black
+1. Those that directly affect the font and its appearance (including the typeface, whether it is regular, bold or italic, 
+and the size of the text)
 
-Style of font 
-* Normal
-* Italic
-* Oblique
+2. Those that would have the same effect on text no matter what font you were using (including the color of text and the spacing between words and letters) The formatting of your text can have a significant effect on how readable your pages are. As we look through these properties I will also give you some design tips on how to display your type.
 
-Stretch of font 
-* Condensed
-* Regular
-* Extended
+### Specifying Typefaces
 
-Specifying Typefaces
+*The font-family property allows you to specify the typeface that should be used for any text inside the element(s) to 
+which a CSS rule applies.*
 
-**font-family**
+*The value of this property is the name of the typeface you want to use.*
 
-The font-family property
-allows you to specify the
-typeface that should be used for
-any text inside the element(s) to
-which a CSS rule applies.
+*The people who are visiting your site need the typeface you have specified installed on their computer in order for it to be displayed.* 
 
-Size of Type
+*You can specify a list of fonts separated by commas so that, if the user does not have your first choice of typeface installed, the browser can try to use an alternative font from the list.*
 
-**font-size**
-The font-size property enables
-you to specify a size for the
-font.
- 
- There are several ways to
-specify the size of a font:
+*It is also common to end with a generic font name for that type of font (which you saw on pages 269-270).*
+
+*If a font name is made up of more than one word, it should be put in double quotes.*
+
+### Size of Type
+
+*The font-size property enables you to specify a size for the font. There are several ways to specify the size of a font. The most common are:*
+
 1. pixels
+
+*Pixels are commonly used because they allow web designers very precise control over how much space their text takes up. The number of pixels is followed by the letters px.*
+
 2. percentages
-3. ems
 
-**@font-face** allows you to use
-a font, even if it is not installed
-on the computer of the person
-browsing, by allowing you to
-specify a path to a copy of the
-font, which will be downloaded if
-it is not on the user's machine.
+*The default size of text in browsers is 16px. So a size of 75% would be the equivalent of 12px, and 200% would be 32px.If you create a rule to make all text inside the <body> element to be 75% of the default size (to make it 12px), and then specify another rule that indicates the content of an element inside the <body> element should be 75% size, it will be 9px (75% of the 12px font size).*
 
-`@font-face {
-font-family: 'ChunkFiveRegular';
-src: url('fonts/chunkfive.eot');
-src: url('fonts/chunkfive.eot?#iefix')
-format('embedded-opentype'),`
+3. EmsAn
 
+*em is equivalent to the width of a letter m.*
 
-UpperCase &LowerCase
+### Type Scales
 
-text-transform
+*You may have noticed that programs such as Word, Photoshop and InDesign offer the same sizes of text.*
 
-**uppercase** This causes the text to appear
-uppercase.
+*Type Scales:*
 
-**lowercase**
-This causes the text to appear
-lowercase.
+1. 8pt
+2. 9pt
+3. 10pt
+4. 11pt
+5. 12pt
+6. 14pt
+7. 18pt
+8. 24pt
+9. 36pt
+10. 48pt
+11. 60pt
+12. 72pt
 
-**capitalize**
-This causes the first letter of
-each word to appear capitalized.
+*This is because they are set according to a scale or ratio that was developed by European typographers in the sixteenth 
+century.*
 
-**text-decoration**
-- **none**
-This removes any decoration
-already applied to the text.
+*It is considered that this scale for type is pleasing to the eye and it has therefore changed little in the last 400 years.*
 
-- **underline**
-This adds a line underneath the
-text.
+*For this reason, when you are designing pages, using sizes from this scale will help them look more attractive.*
 
-- **overline**
-This adds a line over the top of
-the text.
+*On the next page, you can see how to achieve this scale using pixels, percentages, and ems.Print designers often refer to the size of text in terms of points rather than pixels (hence the use of pt in the scale on the right). A pixel roughly equates to a point because a point corresponds to 1/72 of an inch, and most computer displays have a resolution of 72 dots per inch.*
 
-- **line-through**
-This adds a line through words.
+*The default size of text in a browser is 16 pixels. So if you use percentages or ems, you calculate the size of text you 
+want based on the default size of the text used in browsers. For example, you could scale down to 12 pixels for body copy and scale up to 24 pixels for headings.*
 
-- **blink**
-This animates the text to make it
-flash on and off
+*Recently, some web designers have started to leave the body text at the default size of 16 pixels and adjust the other font sizes using a scale that keeps the relative proportions of this one.*
 
-**line-height**
+*When you first see body text at 16 pixels, it might seem quite large. Once you get used to the larger type, however, most people find it far easier to read; and going back to a page where main type is 12 pixels will often then look quite small.*
 
-Leading (pronounced ledding) is
-a term typographers use for the
-vertical space between lines of
-text.
+## @font-face
 
-**Letter & Word Spacing**
+*@font-face allows you to use a font, even if it is not installed on the computer of the person browsing, by allowing you to specify a path to a copy of the font, which will be downloaded if it is not on the user's machine.*
 
-**letter-spacing**
+*Because this technique allows a version of the font to be downloaded to the user's computer, it is important that the license for the font permits it to be used in this way.*
 
-**word-spacing**
+### font-family
 
+*This specifies the name of the font. This name can then be used as a value of the font-familyproperty in the rest of the style sheet (as shown in the rule for the h1 and h2 elements).*
 
-**text-align**:
-left , right , center , justify
+### src
 
-**vertical-align**
+*This specifies the path to the font. In order for this technique to work in all browsers, you will probably need to specify paths to a few different versions of the font, as shown on the next page.*
 
-vertical-align: text-top
+### format
 
-vertical-align: baseline
+*This specifies the format that the font is supplied in. (It's discussed in detail on the next page.)*
 
-vertical-align: text-bottom
+## font-weight
 
-**text-indent**
-The text-indent property
-allows you to indent the first
-line of text within an element.
+*The font-weight property allows you to create bold text. There are two values that this property commonly takes:*
 
-**text-shadow**
-take three lengths and a color for
-the drop shadow:
-1. The first length indicates how
-far to the left or right the shadow
-should fall.
-2. The second value indicates the
-distance to the top or bottom
-that the shadow should fall.
-3. The third value is optional and
-specifies the amount of blur that
-should be applied to the drop
-shadow.
-4. The fourth value is the color of
-the drop shadow.
+### normal
 
+*This causes text to appear at a normal weight.*
 
+### bold
 
-**:first-letter, :first-line**
-You can specify different values
-for the first letter or first line of
-text inside an element.
+*This causes text to appear bold*
 
-**Styling Links**
+## font-style
 
-**:link**
-This allows you to set styles
-for links that have not yet been
-visited.
+*If you want to create italic text, you can use the font-styleproperty. There are three values this property can take:*
 
-**:visited**
-This allows you to set styles for
-links that have been clicked on.
+### normal
 
+*This causes text to appear in a normal style (as opposed to italic or oblique).*
 
-**Responding to Users**
-:hover, :active, :focus
+### italic
 
-**Attribute Selectors**
+*This causes text to appear italic.*
 
-![image](img2/cap1.PNG)
+### oblique
+
+*This causes text to appear oblique.*
+
+for more information: https://en.wikipedia.org/wiki/Help:Advanced_text_formatting
